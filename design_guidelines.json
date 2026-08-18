@@ -1,0 +1,104 @@
+{
+  "theme": "Light theme (Primary Navy, Secondary Gold, White background)",
+  "typography": {
+    "headings": {
+      "font": "Playfair Display",
+      "import": "@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');",
+      "fallback": "serif",
+      "rules": "Must use tight letter spacing (`tracking-tight` or `tracking-tighter`) for large sizes (text-4xl+). Line-height tight (`leading-none`) for headers. Never center by default."
+    },
+    "body": {
+      "font": "Manrope",
+      "import": "@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');",
+      "fallback": "sans-serif",
+      "rules": "Loose leading (`leading-relaxed`) for readable paragraphs. Text scale text-base to text-lg."
+    },
+    "overlines": {
+      "rules": "Must be uppercase, tiny (text-xs or text-sm), and wide spacing (`tracking-[0.2em]`). Use for section prefixes like '01 / ABOUT US'."
+    }
+  },
+  "colors": {
+    "primary": "#002B5B",
+    "secondary": "#C89B3C",
+    "background": "#FFFFFF",
+    "accent": "#F4F6F8",
+    "text_dark": "#0A1118",
+    "text_light": "#FFFFFF",
+    "rules": "Use Navy Blue as the primary anchor for structure. Pair with Gold for highlights/CTAs. Do not use generic full-screen gradients. Use solid colors or very subtle mesh gradients."
+  },
+  "visual_enhancers": {
+    "shadows": "Use soft ambient shadows combined with precise direct shadows. (e.g., `shadow-[0_8px_32px_rgba(0,43,91,0.08)]`).",
+    "borders": "1px crisp edges with semi-transparent borders for cards (`border-primary/10`).",
+    "overlays": "Hero image MUST have a maximum overlay opacity of `bg-navy/50` or a gradient overlay (`bg-gradient-to-r from-[#002B5B]/90 via-[#002B5B]/60 to-transparent`). NEVER use complete transparent backgrounds in headers or dropdowns. Use Glassmorphism with `backdrop-blur-xl bg-white/80` for light headers.",
+    "image_treatment": "Duotone navy treatments for secondary images. Use clipped frames and spotlight layouts rather than standard full-width strips."
+  },
+  "layouts": {
+    "hero": "Full screen (`min-h-screen`) with kinetic typography. Line-by-line masked text reveal on load. Asymmetrical arrangement of text. Dual CTAs prominent.",
+    "sections": "Generous spacing philosophy (`py-24`, `py-32`). Use asymmetrical grids. Numbered manifesto-style chapters for About/Visi-Misi.",
+    "bento_grid": "For 'Why Choose Us' and 'Services', use an asymmetrical grid (e.g., The 'Tetris' grid). Some items span 2 columns, others 1, with varying heights."
+  },
+  "motion": {
+    "scrolling": "MUST use `@studio-freight/react-lenis` for smooth momentum scrolling.",
+    "reveals": "Use `framer-motion` for scroll-reveals. Staggered fade-up, clip-path reveals for images.",
+    "marquee": "Use `react-fast-marquee` for a slow editorial ribbon containing brand heritage ('Since 2014'). Very slow, smooth drift with large spacing.",
+    "interactions": "Hover states on all interactive elements. Buttons must slightly scale up or translate-y, with color transitions."
+  },
+  "accessibility": {
+    "contrast": "Ensure minimum 4.5:1 text contrast. Text over images must have shadow or dark overlay.",
+    "aria": "Add `aria-hidden=\"true\"` to purely decorative animations/icons.",
+    "motion": "Respect `prefers-reduced-motion`.",
+    "test_attributes": "All interactive and key informational elements MUST include a `data-testid` attribute (e.g., `data-testid=\"hero-cta-quote\"`)."
+  },
+  "media": {
+    "3d_libraries": "Framer Motion for 2.5D layer parallax in the hero."
+  },
+  "image_urls": {
+    "hero_background": {
+      "url": "https://images.pexels.com/photos/14810115/pexels-photo-14810115.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Cargo ship navigating open sea, used for the main hero background.",
+      "category": "Hero Section"
+    },
+    "marine_supply": {
+      "url": "https://images.pexels.com/photos/12069389/pexels-photo-12069389.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Fishing boat deck with crates, used for Marine Supply / Working Gear service card.",
+      "category": "Services Section"
+    },
+    "crew_documentation": {
+      "url": "https://images.unsplash.com/photo-1748997484521-70c8563e3510?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHxtYXJpdGltZSUyMGNyZXclMjBzYWlsb3IlMjB1bmlmb3JtfGVufDB8fHx8MTc4NzAyMzU4MXww&ixlib=rb-4.1.0&q=85",
+      "description": "Sailors in uniform, used for Crew Documentation service.",
+      "category": "Services Section"
+    },
+    "visa_services": {
+      "url": "https://images.pexels.com/photos/4922356/pexels-photo-4922356.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Open passport with travel stamps, used for Visa & Embassy Services card.",
+      "category": "Services Section"
+    }
+  },
+  "components_to_install": [
+    "lucide-react",
+    "framer-motion",
+    "react-fast-marquee",
+    "@studio-freight/react-lenis",
+    "sonner"
+  ],
+  "instructions_to_main_agent": [
+    "Configure tailwind.config.js with primary #002B5B, secondary #C89B3C, background #FFFFFF, accent #F4F6F8.",
+    "Ensure the hero immediately shows the tagline, headline, short description, and both CTAs.",
+    "Language switcher (ID/EN toggle) should be functional, switching hardcoded text strings.",
+    "Form Modal: 'Request Quotation' opens a Shadcn UI Dialog containing a Contact Form (Name, Company, Email, Phone, Service, Message) that handles a mock backend submission.",
+    "WhatsApp Link: 'Hubungi Kami' opens a new tab to WhatsApp (`https://wa.me/6281261147333`).",
+    "Create a slow editorial marquee separating the Hero and the About Us section.",
+    "Use standard raw HTML+Tailwind tags for the marketing sections structure, avoid using rigid 'Card' wrappers when asymmetrical overlaps are needed.",
+    "Implement Lenis smooth scrolling globally.",
+    "No generic centered templates. Build with high-contrast text layers and intentional asymmetry.",
+    "Footer must be dark (navy) with high contrast against the light body sections."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": {
+    "anti_slop": "Do not converge toward generic 'AI slop' aesthetics. Use bold typography and generous spacing.",
+    "styling": "Create depth through layered design elements with z-index hierarchy. Avoid complete transparent backgrounds in navigation. Never center align the app container (.App { text-align: center; } is banned).",
+    "animations": "Do NOT apply universal transitions (e.g., `transition: all`). Target specific properties. Every interaction needs micro-animations (hover states, parallax).",
+    "spacing": "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "icons": "Never use emoji characters for icons.",
+    "testing": "All interactive elements must have `data-testid` attributes."
+  }
+}
