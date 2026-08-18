@@ -12,6 +12,7 @@ Company website for CV Trinita Bahana Persada (Indonesian maritime company since
 - Frontend: React 19 + Tailwind + framer-motion + lenis (smooth scroll) + react-fast-marquee + sonner; bilingual via LanguageContext (localStorage-persisted); QuoteContext controls quotation modal globally
 - Backend: FastAPI + MongoDB (motor), BaseDocument/PyObjectId pattern
 - API: `GET /api/`, `POST /api/quotations`, `GET /api/quotations`
+- Email: Resend via Emergent managed proxy (httpx, guardrail gate `_assert_safe_email`, from_name = CV Trinita Bahana Persada, reply-to admin@trinitabp.com). Notification sent to `ADMIN_EMAIL` on every new quotation; failure never blocks the form.
 - Logo stored at `/app/frontend/public/assets/logo.jpeg`
 
 ## Core Requirements (static)
@@ -20,6 +21,10 @@ Company website for CV Trinita Bahana Persada (Indonesian maritime company since
 - ID/EN language switcher in navbar
 - Quotation form saved to DB; Hubungi Kami opens WhatsApp
 - data-testid on all interactive elements
+
+## Implemented (2026-08-18, update)
+- Email alerts: every new quotation triggers an instant HTML notification email to ADMIN_EMAIL (admin@trinitabp.com). Verified end-to-end with the Resend test inbox (send accepted, email id returned). NOTE: the proxy currently rejects admin@trinitabp.com as undeliverable — the trinitabp.com mailbox/MX likely isn't set up yet; feature activates automatically once the mailbox exists or ADMIN_EMAIL is changed.
+- All 5 service cards now use fitting real photography (Jakarta container yard, dockworkers securing cargo, maritime worker in PPE, crew on deck in Indonesian waters, passport with stamps) with icon chips + hover-reveal descriptions.
 
 ## Implemented (2026-08-18)
 - Kinetic hero: masked line-by-line headline reveal, parallax background, logo badge, dual CTAs
