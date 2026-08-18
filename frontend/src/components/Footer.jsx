@@ -71,9 +71,11 @@ const Footer = () => {
                 <Globe className="h-4 w-4 text-gold" aria-hidden="true" />
                 www.trinitabp.com
               </li>
-              <li className="flex items-center gap-3 text-white/75" data-testid="footer-location">
-                <MapPin className="h-4 w-4 text-gold" aria-hidden="true" />
-                Indonesia
+              <li className="flex items-start gap-3 text-white/75" data-testid="footer-location">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" aria-hidden="true" />
+                <span className="leading-relaxed">
+                  Jalan Raya Bekasi Barat No. 14, RT 4/RW 2, Kel. Rawabunga, Kec. Jatinegara, Jakarta Timur 13350
+                </span>
               </li>
             </ul>
           </div>

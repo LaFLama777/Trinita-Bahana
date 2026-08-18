@@ -3,7 +3,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { Reveal, ChapterHeading } from "@/components/Reveal";
 
 const ABOUT_IMG =
-  "https://images.pexels.com/photos/12069389/pexels-photo-12069389.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
+  "https://images.pexels.com/photos/35458829/pexels-photo-35458829/free-photo-of-sunset-over-bintulu-port-with-crane-and-cargo-ships.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
 
 const About = () => {
   const { t } = useLanguage();
@@ -74,7 +74,7 @@ const About = () => {
               <div className="absolute inset-0 bg-navy/20 mix-blend-multiply" aria-hidden="true" />
             </motion.div>
             <Reveal delay={0.25}>
-              <div className="mt-[-3.5rem] ml-auto mr-4 w-fit rounded-xl bg-navy px-7 py-5 shadow-[0_16px_48px_rgba(0,43,91,0.35)] lg:mr-[-1rem]">
+              <div className="mt-6 w-fit rounded-xl bg-navy px-7 py-5 shadow-[0_16px_48px_rgba(0,43,91,0.35)]">
                 <div className="font-display text-lg italic text-gold">Since 2014</div>
                 <div className="mt-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-white/70">
                   Marine Supply · Maritime Support

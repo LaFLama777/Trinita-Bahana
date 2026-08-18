@@ -25,6 +25,8 @@ Company website for CV Trinita Bahana Persada (Indonesian maritime company since
 ## Implemented (2026-08-18, update)
 - Email alerts: every new quotation triggers an instant HTML notification email to ADMIN_EMAIL (admin@trinitabp.com). Verified end-to-end with the Resend test inbox (send accepted, email id returned). NOTE: the proxy currently rejects admin@trinitabp.com as undeliverable — the trinitabp.com mailbox/MX likely isn't set up yet; feature activates automatically once the mailbox exists or ADMIN_EMAIL is changed.
 - All 5 service cards now use fitting real photography (Jakarta container yard, dockworkers securing cargo, maritime worker in PPE, crew on deck in Indonesian waters, passport with stamps) with icon chips + hover-reveal descriptions.
+- About image replaced with port crane & cargo ships at sunset; "Since 2014" badge no longer overlaps the image.
+- Office address added to footer: Jalan Raya Bekasi Barat No. 14, RT 4/RW 2, Kel. Rawabunga, Kec. Jatinegara, Jakarta Timur 13350.
 
 ## Implemented (2026-08-18)
 - Kinetic hero: masked line-by-line headline reveal, parallax background, logo badge, dual CTAs
